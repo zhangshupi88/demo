@@ -1,0 +1,1 @@
+menu.init(0, '.controls a', '.effects', 'selected-');

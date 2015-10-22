@@ -1,0 +1,101 @@
+body {
+  background-color: black;
+}
+
+.person-icon {
+  stroke: none;
+}
+
+.plus {
+  transform-origin: 50% 50%;
+  transition: all 0.2s ease-out;
+  -webkit-transform: translate(0px, 0px) rotate(0deg);
+}
+
+.checkmark {
+  width: 40px;
+  height: 40px;
+  border-radius: 0%;
+  display: block;
+  stroke-width: 4;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #FBD901;
+  transition: all 0.5s ease-out;
+}
+.checkmark:hover .body-icon {
+  -webkit-animation: move-head .3s forwards ease-out;
+}
+.checkmark:hover .plus {
+  -webkit-transform: rotate(180deg);
+}
+
+.checkmark__circle {
+  stroke-width: 0;
+  stroke-miterlimit: 10;
+  stroke: #FBD901;
+  fill: #FBD901;
+  transform: scale(0.2, 0.2);
+  transition: all .2s ease-in-out;
+  transform-origin: 50% 40%;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+}
+
+.checkmark.checked {
+  animation: scale .3s ease-in-out .9s both;
+}
+.checkmark.checked .plus {
+  transform: translate(-10px, 10px);
+}
+.checkmark.checked .checkmark__circle {
+  stroke-miterlimit: 10;
+  stroke: #FBD901;
+  transform: scale(1, 1);
+}
+.checkmark.checked .checkmark__check {
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #FBD901;
+  }
+}
+@keyframes rotate-plus {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+  }
+}
+@keyframes move-head {
+  0% {
+    -webkit-transform: translateY(0px);
+  }
+  30% {
+    -webkit-transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+  }
+}

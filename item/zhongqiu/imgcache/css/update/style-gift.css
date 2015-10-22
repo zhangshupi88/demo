@@ -1,0 +1,112 @@
+@charset "utf-8";
+header, hgroup, menu, nav, section, menu, footer, article, figure, figcaption {
+	display: block;
+	margin: 0;
+	padding: 0
+}
+body, p, input, div, h1, h2, h3, h4, ul, li, ol, dl, dt, dd, form {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	vertical-align: middle;
+	word-wrap: break-word;
+	-webkit-text-size-adjust: 100%
+}
+fieldset, img, input, button, select, textarea {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	background: 0;
+	outline: 0
+}
+html {font-size: 62.5%;}
+body {
+	-webkit-text-size-adjust: none;
+	font-family: "微软雅黑", Helvetica, STHeiTi, sans-serif;
+	color: #000;
+    font-size: 1.2rem;
+}
+a, img {
+	-webkit-touch-callout: none;
+	text-decoration: none;
+	-webkit-tap-highlight-color: rgba(255,0,0,0)
+}
+input, button {
+	font-family: "微软雅黑", Helvetica, STHeiTi, sans-serif
+}
+body, .index .main {
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch
+}
+.clear {
+	overflow: hidden;
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px
+}
+.cf:before, .cf:after {
+	content: "";
+	display: table
+}
+.cf:after {
+	clear: both
+}
+.cf {
+	zoom: 1
+}
+:focus {
+	-moz-outline-style: none;
+	outline: 0
+}
+input {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+input::-webkit-input-placeholder {
+text-align:center
+}
+body{background:#f0c900}
+/*head title*/
+.title{width:100%;position:relative;}
+.title img{width:100%}
+.title .text{width:72%;
+height:37.5%;line-height:100%;left:14%;position:absolute;top:56%;color:#fff;font-size:1.3rem; text-align:center;font-weight:700}
+.title .text p{
+line-height: 3rem;
+position: absolute;
+top: 50%;
+margin-top: -1.5rem;
+text-align: center;
+width: 100%;}
+.title .text em{font-style:normal;color:#fff000;font-size:1.5rem;margin-left:0.5rem;margin-right:0.5rem}
+
+/*content*/
+.gift-list{margin-top:2%;}
+.gift-list li{width:44%;margin-left:4%;display:inline-block;float:left;margin-bottom:4%}
+.gift-list li:nth(2n){margin-right:4%}
+.gift-list li:only-child{margin-right:28%;margin-left:28%}
+.content .hint{color:#ea5300;font-size:0.9rem; text-align:center;width:73.4%;margin:0 auto;}
+.content .list-item {position:relative;padding:1.3rem 0.2rem;border:1px dashed #e19300;border-radius:13px;background:#fff000; text-align:center}
+.gift-list .list-item:hover{background:#efe102}
+.content .list-item img{width:4.8rem;height:4.8rem;}
+.content .list-item h3{font-weight:400;font-size:1.3rem;color:#ea5300;padding:0.5rem 0;border-bottom:1px dashed #fedc00;margin-bottom:0.5rem}
+.content .list-item p{font-size:1rem;color:#000;margin-top:0;5rem;height:4.8rem;}
+.content .list-item .btn{margin:0 auto;width:6.8rem;height:3rem}
+.content .list-item .icon-gift{position:absolute;right:0;top:0;width:36px;height:32px;display:inline-block;background:url(../../images/update/icon-gift.png) no-repeat 0 0; background-size:cover;}
+.content .list-item .text{height:3rem;font-size:1rem}
+.content .list-item .text div{margin-top:0.5rem;border:1px dashed #f4a100;display:inline-block;padding-left:0.5rem;padding-right:0.5rem;border-radius:1rem;font-size:0.9rem;color:#000; text-align:left}
+.content .list-item .text .tx-em{font-weight:400;color:#ea3d69;display:inline-block; height:auto}
+
+/*场景气泡*/
+.srceen i{display:block;position:absolute}
+.srceen .icon-qipao1,.srceen .icon-qipao2,.srceen .icon-qipao3{ background:url(../../images/update/srceen-item.png) no-repeat 0 0;width:3rem;height:3rem;background-size:contain;left:-1.5rem;top:14rem; opacity:0.5}
+.srceen .icon-qipao2{left:0.5rem;top:43.5rem}
+.srceen .icon-qipao3{left:16rem;top:33.5rem}
+.srceen .icon-qipao4{ background:url(../../images/update/screen-item1.png ) no-repeat 0 0;width:1.6rem;height:5.2rem;background-size:contain;left:-0.6rem;top:33rem; opacity:0.6}
+.srceen .icon-qipao5{ background:url(../../images/update/screen-item2.png) no-repeat 0 0;width:4.4rem;height:5.7rem;background-size:contain;right:0;top:20rem; opacity:0.5}
+.srceen .icon-qipao6,.srceen .icon-qipao7{ background:url(../../images/update/screen-item3.png) no-repeat 0 0;width:1.4rem;height:1.4rem;background-size:contain;right:0.5rem;top:40rem; opacity:0.5}
+.srceen .icon-qipao7{left:18.5rem;top:17rem}
+/*btn*/
+.btn{display:block;border:0.1rem solid #3a7203;background:#5cb604;border-radius:0.8rem;box-shadow:0 0.2rem 0.2rem #b8ff08 inset;color:#fff;font-size:1.4rem; box-sizing:border-box}
+.btn:hover{background:#499003}

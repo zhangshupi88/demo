@@ -1,0 +1,366 @@
+<!DOCTYPE html><html class=''>
+<head><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="canonical" href="http://codepen.io/johan-tirholm/pen/xwLOJa" />
+
+
+<style class="cp-pen-styles">@font-face {
+  font-family: 'ChunkFive';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/chunkfive-webfont.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/chunkfive-webfont.eot?#iefix") format("embedded-opentype"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/chunkfive-webfont.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/chunkfive-webfont.ttf") format("truetype");
+}
+body {
+  margin: 0;
+  font-family: 'ChunkFive';
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: #013B3B;
+}
+
+.container {
+  width: 30em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.controls {
+  font-size: 2em;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.controls li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.controls a {
+  color: #FF4D5B;
+  text-decoration: none;
+  display: block;
+  padding: .2em 0;
+  cursor: pointer;
+}
+.controls a.active {
+  color: #000;
+  background-color: #F4C552;
+}
+
+.effects {
+  background-color: #F4C552;
+  padding: 1em;
+}
+
+.effect {
+  height: 2.5em;
+  background-color: #FFF;
+  font-size: 6em;
+  text-align: center;
+  line-height: 2.5em;
+}
+
+.effects > div {
+  display: none;
+}
+
+.effect {
+  -webkit-perspective: 10em;
+          perspective: 10em;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /* Fixes bug */
+  position: relative;
+  background-size: 0 0 !important;
+}
+.effect > div,
+.effect > svg {
+  left: 0;
+  position: absolute;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  text-transform: uppercase;
+}
+.effect > div {
+  background: inherit;
+}
+.effect svg {
+  z-index: 3;
+}
+.effect text {
+  text-anchor: middle;
+}
+.effect .image {
+  z-index: 1;
+}
+.effect .shadow {
+  z-index: 2;
+  color: transparent;
+}
+
+.selected-1 .effect-1__content {
+  color: #111;
+  display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/261.jpeg);
+  background-size: 0 0;
+}
+.selected-1 .effect-1__content text {
+  fill: url(#item);
+}
+.selected-1 .effect-1__content .image {
+  -webkit-animation: anim-1-image 1s cubic-bezier(0.3, 0.575, 0.565, 1) alternate infinite;
+          animation: anim-1-image 1s cubic-bezier(0.3, 0.575, 0.565, 1) alternate infinite;
+  -webkit-transform-origin: 50% 63%;
+      -ms-transform-origin: 50% 63%;
+          transform-origin: 50% 63%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background-size: cover;
+}
+.selected-1 .effect-1__content .image:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: .1em;
+  background: inherit;
+  background-position: 0 100%;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: rotateX(-9deg);
+          transform: rotateX(-9deg);
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+.selected-1 .effect-1__content .shadow {
+  background: none;
+  -webkit-animation: anim-1-shadow 1s alternate infinite;
+          animation: anim-1-shadow 1s alternate infinite;
+}
+
+@-webkit-keyframes anim-1-image {
+  0%, 19% {
+    color: transparent;
+  }
+  20% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    color: #333;
+  }
+  90%, 100% {
+    -webkit-transform: rotateX(85deg);
+            transform: rotateX(85deg);
+  }
+}
+
+@keyframes anim-1-image {
+  0%, 19% {
+    color: transparent;
+  }
+  20% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+    color: #333;
+  }
+  90%, 100% {
+    -webkit-transform: rotateX(85deg);
+            transform: rotateX(85deg);
+  }
+}
+@-webkit-keyframes anim-1-shadow {
+  0%, 25% {
+    text-shadow: none;
+  }
+  40%, 100% {
+    text-shadow: 0 -.02em 0 #111;
+  }
+}
+@keyframes anim-1-shadow {
+  0%, 25% {
+    text-shadow: none;
+  }
+  40%, 100% {
+    text-shadow: 0 -.02em 0 #111;
+  }
+}
+.selected-2 .effect-2__content {
+  display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/193.jpeg) no-repeat;
+}
+.selected-2 .effect-2__content text {
+  fill: url(#castle);
+}
+.selected-2 .effect-2__content .image {
+  background-size: 0 0;
+}
+.selected-2 .effect-2__content .image > div {
+  background: inherit;
+  overflow: hidden;
+}
+.selected-2 .effect-2__content .image .image__top {
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  height: 63%;
+  background-size: cover;
+  position: relative;
+  -webkit-animation: anim-2 4s infinite;
+          animation: anim-2 4s infinite;
+}
+.selected-2 .effect-2__content .image .image__bottom {
+  background-size: cover;
+  background-position: bottom;
+  height: 37%;
+}
+.selected-2 .effect-2__content .shadow {
+  -webkit-animation: anim-2-shadow 4s infinite;
+          animation: anim-2-shadow 4s infinite;
+  background: none;
+}
+
+@-webkit-keyframes anim-2 {
+  0%, 10% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  40%, 60% {
+    -webkit-transform: rotateX(87deg);
+            transform: rotateX(87deg);
+  }
+  90%, 100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes anim-2 {
+  0%, 10% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  40%, 60% {
+    -webkit-transform: rotateX(87deg);
+            transform: rotateX(87deg);
+  }
+  90%, 100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+@-webkit-keyframes anim-2-shadow {
+  0%, 15% {
+    text-shadow: none;
+  }
+  17%, 80% {
+    text-shadow: 0 -.02em 0 #283335;
+  }
+  90%, 100% {
+    text-shadow: none;
+  }
+}
+@keyframes anim-2-shadow {
+  0%, 15% {
+    text-shadow: none;
+  }
+  17%, 80% {
+    text-shadow: 0 -.02em 0 #283335;
+  }
+  90%, 100% {
+    text-shadow: none;
+  }
+}
+</style></head><body>
+
+<div class="container">
+  <ul class="controls">
+    <li> <a onclick="menu.change(1)">1</a></li>
+    <li> <a onclick="menu.change(2)">2</a></li>
+  </ul>
+  <div class="effects">
+    <div class="effect effect-1__content">
+      <svg>
+        <defs>
+          <pattern id="item" patternUnits="userSpaceOnUse" width="448" height="240">
+            <image xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/261.jpeg" width="448" height="240"></image>
+          </pattern>
+        </defs>
+        <text x="50%" y="50%" dy=".33em">item</text>
+      </svg>
+      <div class="image">item</div>
+      <div class="shadow">item</div>
+    </div>
+    <div class="effect effect-2__content">
+      <svg>
+        <defs>
+          <pattern id="castle" patternUnits="userSpaceOnUse" width="448" height="240">
+            <image xlink:href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/193.jpeg" width="448" height="240"></image>
+          </pattern>
+        </defs>
+        <text x="50%" y="50%" dy=".33em">Castle</text>
+      </svg>
+      <div class="shadow">Castle</div>
+      <div class="image">
+        <div class="image__top"></div>
+        <div class="image__bottom"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src='//assets.codepen.io/assets/common/stopExecutionOnTimeout.js?t=1'></script>
+<script>(function() {
+  var links,
+      stage,
+      stageClass,
+      stageActiveName;
+  
+  function init(startIndex, linkSelector, stageSelector, activeClassName) {
+    links = document.querySelectorAll(linkSelector);
+    stage = document.querySelector(stageSelector);
+    stageClass = stage.className;
+    stageActiveName = activeClassName;
+    setLink(startIndex);
+  }
+  
+  function setLink(i) {
+    links[i].classList.add('active');
+    stage.className = stageClass + " " + stageActiveName + (i + 1);
+  }
+  
+  function change(i) {
+    for(var x = 0; x < links.length; x++) {
+      links[x].classList.remove('active');
+    }
+    setLink(i - 1);
+  }
+  
+  window.menu = {
+		init: init,
+    change: change
+	}
+})();
+
+// menu.init('.controls', '.effects', 'effect-')</script>
+<script>
+menu.init(0, '.controls a', '.effects', 'selected-');
+//# sourceURL=pen.js
+</script>
+<script src='//codepen.io/assets/editor/live/css_live_reload_init.js'></script>
+</body></html>

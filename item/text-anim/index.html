@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Responsive text animations</title>
+    
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      html, body {
+  height: 100%;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  color: white;
+  cursor: ew-resize;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  float: left;
+  background: #333;
+  min-height: 100%;
+  visibility: hidden;
+}
+
+.block {
+  margin: 10px 15px;
+}
+
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+    
+  <div class="block">Click anywhere and start dragging.</div>
+  
+  <div class="block">Bacon ipsum dolor amet hamburger salami fatback, beef ribs meatball picanha cow pancetta swine kielbasa spare ribs. Shoulder doner pork belly meatloaf chicken tail, bacon pork loin shank. Pancetta prosciutto pork rump biltong.</div>
+
+  <div class="block">Tenderloin ball tip pork sausage ribeye tongue ham kielbasa shoulder bresaola leberkas tri-tip spare ribs pork chop. Chicken ground round sirloin, shank venison pork loin drumstick boudin rump. Fatback doner salami pig boudin biltong chicken ground round shankle hamburger landjaeger kevin. Meatball beef ribs meatloaf turducken corned beef beef bresaola picanha prosciutto. Short ribs shank bacon, ham brisket hamburger turkey biltong boudin pork chop swine prosciutto corned beef t-bone.</div>
+
+  <div class="block">Fatback picanha pork flank landjaeger venison. Hamburger flank pork belly, pork chop swine t-bone beef ribs picanha chuck shankle beef cupim tenderloin pork loin. Biltong chuck spare ribs ham hock beef ribs sirloin frankfurter pastrami doner pork leberkas meatball ham shank. Shoulder cow sausage turkey chuck turducken pastrami picanha meatball t-bone jerky kevin.</div>  
+
+  <div class="block">Landjaeger shoulder hamburger pancetta, ham hock ham t-bone doner shank frankfurter. Doner ham hock pork tail jowl sausage. Fatback andouille shank bacon sirloin salami pancetta meatball. Ham hock turkey pork loin ball tip corned beef, capicola filet mignon alcatra cow turducken kevin venison chicken.</div> 
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/utils/Draggable.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

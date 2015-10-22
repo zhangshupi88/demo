@@ -1,0 +1,31 @@
+body {
+	background: #000;
+	overflow: hidden;	
+}
+
+canvas {
+	-webkit-animation: fade-in 3000ms forwards;
+	        animation: fade-in 3000ms forwards;
+	display: block;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+@-webkit-keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;	
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;	
+	}
+}

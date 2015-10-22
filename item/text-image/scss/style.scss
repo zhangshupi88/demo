@@ -1,0 +1,169 @@
+.effects {
+  > div {
+    display: none;
+  }
+}
+
+.effect {
+  perspective: 10em;
+  backface-visibility: hidden; /* Fixes bug */
+  position: relative;
+  background-size: 0 0 !important;
+  
+  > div,
+  > svg {
+    left: 0;
+    position: absolute;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
+  > div {
+    background: inherit;
+  }
+  
+  svg {
+    z-index: 3;
+  }
+  
+  text {
+    text-anchor: middle;
+  }
+  
+  .image {
+    z-index: 1;
+  }
+  
+  .shadow {
+    z-index: 2;
+    color: transparent;
+  }
+}
+
+// Effect 1
+.selected-1 .effect-1__content {
+  color: #111;
+  display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/261.jpeg);
+  background-size: 0 0;
+  
+  text { fill: url(#sand); }
+  
+  .image {
+    animation: anim-1-image 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) alternate infinite;
+    transform-origin: 50% 63%;
+    transform-style: preserve-3d;
+    background-size: cover;
+
+    &:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: .1em;
+      background: inherit;
+      background-position: 0 100%;
+      background-size: cover;
+      bottom: 0;
+      left: 0;
+      transform: rotateX(-90deg);
+      transform-origin: 0 0;
+    }
+  }
+  
+  .shadow {
+    background: none;
+    animation: anim-1-shadow 1s alternate infinite;
+  }
+}
+
+@keyframes anim-1-image {
+  0%, 19% {
+    color: transparent;
+  }
+  
+  20% {
+    transform: rotateX(0);
+    color: #333;
+  }
+  
+  90%, 100% {
+    transform: rotateX(85deg);
+  }
+}
+
+@keyframes anim-1-shadow {
+  0%, 25% {
+    text-shadow: none;
+  }
+  
+  40%, 100% {
+    text-shadow: 0 -.02em 0 #111;
+  }
+}
+
+// Effect 2
+.selected-2 .effect-2__content {
+  display: block;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/193.jpeg) no-repeat;
+  
+  text { fill: url(#castle); }
+  
+  .image {
+    background-size: 0 0;
+    
+    > div {
+      background: inherit;
+      overflow: hidden;
+    }
+    
+    .image__top {
+      transform-origin: 0 100%;
+      height: 63%;
+      background-size: cover;
+      position: relative;
+      animation: anim-2 4s infinite;
+    }
+    
+    .image__bottom {
+      background-size: cover;
+      background-position: bottom;
+      height: 37%;
+      
+    }
+  }
+  
+  .shadow {
+    animation: anim-2-shadow 4s infinite;
+    background: none;
+  }
+}
+
+@keyframes anim-2 {
+  0%, 10% {
+    transform: rotateX(0);
+  }
+  
+  40%, 60% {
+    transform: rotateX(87deg);
+  }
+  
+  90%, 100% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes anim-2-shadow {
+  0%, 15% {
+    text-shadow: none;
+  }
+  
+  17%, 80% {
+    text-shadow: 0 -.02em 0 #283335;
+  }
+  
+  90%, 100% {
+    text-shadow: none;
+  }
+}

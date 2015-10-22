@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+}
+
+body {  
+  background: black;  
+  overflow: hidden;
+  color: white;  
+  cursor: ew-resize;
+}
+
+* {
+  padding:0;
+  margin:0;
+}
+
+.container {
+  position: relative;
+  float: left;
+  background: #333;  
+  min-height: 100%;  
+  visibility: hidden;
+}	
+
+.block {
+  margin: 10px 15px;
+}
+

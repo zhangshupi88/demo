@@ -1,0 +1,6 @@
+@charset "utf-8";
+@import url(reset.css);
+/*ask*/
+.ask-wrap{padding:15px 8px;font-size:1.6rem;}
+.ask-wrap dl dt{background:#fdd405;border-radius:2px;padding:5px 8px;margin-bottom:10px;}
+.ask-wrap dl dd{color:rgba(0,0,0,0.85);margin-bottom:30px;line-height:24px;}

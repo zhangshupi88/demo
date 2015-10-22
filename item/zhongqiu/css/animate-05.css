@@ -1,0 +1,144 @@
+.pg05 {
+    background-image: url(../images/pg05@2x.png);
+    background-repeat: no-repeat;
+    display: block;
+    background-size: 18.3125rem 61.125rem;
+}
+
+.pg05-cakebdar {
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    width: 4.5625rem;
+    height: 4.5rem;
+    background-position: -0.125rem -0.125rem;
+}
+
+.pg05-dialog {
+    position: absolute;
+    right: 2.8125rem;
+    top:7.5rem;
+    width: 10.3125rem;
+    height: 7.5rem;
+    background-position: -0.125rem -4.875rem;
+}
+
+.pg05-eye1 {
+    position: absolute;
+    bottom: 8.4375rem;
+    left: 6.5rem;
+    z-index: 40;
+    width: 1.125rem;
+    height: 1.1875rem;
+    background-position: -0.125rem -12.625rem;
+}
+
+.pg05-eye2 {
+    position: absolute;
+    bottom: 8.5rem;
+    left: 9.625rem;
+    z-index: 40;
+    width: 1.125rem;
+    height: 1.1875rem;
+    background-position: -0.125rem -12.625rem;
+}
+
+.pg05-gril {
+    position: absolute;
+    bottom: -4.375rem;
+    left: 2.5rem;
+    z-index: 20;
+    width: 10.125rem;
+    height: 18.1875rem;
+    background-position: -0.125rem -14.0625rem;
+}
+
+.pg05-magnifier {
+    position: absolute;
+    bottom: -0.625rem;
+    right: 1.25rem;
+    z-index: 150;
+    width: 8.375rem;
+    height: 6.8125rem;
+    background-position: -0.125rem -32.5rem;
+}
+
+.pg05-notebook {
+    position: absolute;
+    right: 0.625rem;
+    top:15.625rem;
+    width: 16.3125rem;
+    height: 10.0625rem;
+    background-position: -0.125rem -39.5625rem;
+}
+
+.pg05-start {
+    position: absolute;
+    left: 1.25rem;
+    top: 3.125rem;
+    width: 5.5625rem;
+    height: 3.9375rem;
+    background-position: -0.125rem -49.875rem;
+}
+
+.pg05-text1 {
+    position: absolute;
+    left:1.25rem;
+    top:-6.875rem;
+    width: 18.0625rem;
+    height: 5.4375rem;
+    background-position: -0.125rem -54.0625rem;
+}
+
+.pg05-text2 {
+    position: absolute;
+    top: -0.3125rem;
+    left: 1.3125rem;
+    width: 10.375rem;
+    height: 1.25rem;
+    background-position: -0.125rem -59.75rem;
+}
+ 
+
+.pg05-round {
+    position: absolute;
+    bottom: -3.125rem;
+    left: 50%;
+    margin-left: -10rem;
+    width: 19.6875rem;
+    height: 19.6875rem;
+    border-radius: 19.6875rem;
+    background: #f08678;
+}
+
+.pg05-zhezhao { 
+    position: absolute;
+    left: 50%;
+    z-index: 100;
+    margin-left: -11.625rem;
+    bottom: -6.25rem;
+    width: 23.4375rem;
+    height: 12.9375rem;
+    background:url(../images/pg05_zhezhao.png);
+    background-size: 23.4375rem 12.9375rem;
+}
+
+@-webkit-keyframes eye-yun {
+    0%{
+        
+       -webkit-transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+ 
+ 
+}
+ 
+.eye-yun {
+   -webkit-animation:eye-yun 2s infinite linear ;
+}
+ 

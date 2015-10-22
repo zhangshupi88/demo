@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>旋转元点</title>
+<style type="text/css">
+ .roud-inner{background:#f87c9d;width:100px;height:100px;border-radius:100px;position:absolute;left:50px;top:50px;}
+  .roud-out{border:1px solid #db289e;width:120px;height:120px;border-radius:120px;position:absolute;left:40px;top:40px;-webkit-animation:roud 3s 0s linear infinite; }
+  @keyframes roud{
+	  0%{-webkit-transform:rotate(0deg)}
+	   0%{-webkit-transform:rotate(-360deg)}
+	  }
+  .roud-out .dot{position:absolute;top:-3px;left:52px;width:6px;height:6px;background:#f87c9d;border-radius:50%}
+ .roud-out.pos2{width:140px;height:140px;border-radius:50%;left:30px;top:30px;-webkit-animation:roud 2.5s 0s linear infinite;}
+  
+  .roud-out.pos2 .dot{width:10px;height:10px;background:#c9108a}
+</style>
+</head>
+
+<body>
+<div class="roud">
+<div class="roud-out">
+  <div class="dot"></div>
+</div>
+<div class="roud-out pos2">
+  <div class="dot"></div>
+</div>
+<div class="roud-inner"></div>
+</div>
+</body>
+</html>

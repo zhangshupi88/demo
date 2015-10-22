@@ -1,0 +1,30 @@
+//- Variables
+- var text1 = "Sand"
+- var text2 = "Castle"
+
+//- Mixins
+mixin svg-text(text, id, bg)
+  svg
+    defs
+      pattern(id=id,patternUnits="userSpaceOnUse",width="448",height="240")
+        image(xlink:href=bg, width="448", height="240")
+    text(x="50%", y="50%", dy=".33em")=text
+
+//- Markup
+.container
+  ul.controls
+    - for (var i = 1; i <= 2; ++i)
+      li 
+        a(onclick="menu.change(#{i})") #{i}
+  
+  .effects
+    .effect.effect-1__content
+      +svg-text(text1, "sand", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/261.jpeg")
+      .image=text1
+      .shadow=text1
+    .effect.effect-2__content
+      +svg-text(text2, "castle", "https://s3-us-west-2.amazonaws.com/s.cdpn.io/21151/193.jpeg")
+      .shadow=text2
+      .image
+        .image__top
+        .image__bottom

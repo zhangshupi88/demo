@@ -1,0 +1,53 @@
+html,body {
+  margin:0;
+  padding:0;
+}
+body {
+  
+}
+.stage div {
+ width: 100vw; height:100vh;
+}
+.s1 {
+      background-image: url(http://rdcm.com/resize/w2000-h1200/upload/iblock/0aa/01_innovate.jpg?547abcc4);
+  background-size:cover;
+  background-color:red;
+}
+.s2 {
+     background-image: url(http://rdcm.com/resize/w2000-h1200/upload/iblock/568/create.jpg?c481e8eb);
+  background-size:cover;
+  background-color:orange;
+}
+.s3 {
+  background-image: url(http://rdcm.com/resize/w2000-h1200/upload/iblock/6cd/design.jpg?5a40727b);
+  background-size:cover;
+  background-color:green;
+ }
+.s4 {
+      background-image: url(http://rdcm.com/resize/w2000-h1200/upload/iblock/5c2/rdteam.jpg?2f0a2413);
+  background-size:cover;
+  background-color:yellow;
+}
+.stage {
+  animation: rotate 10s infinite linear;
+  transform-style: preserve-3d;
+  
+  perspective-origin: 100% 50%; 
+  width: 100vw; height:100vh;
+}
+.stage aside {
+
+  
+}
+@keyframes rotate {
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.stage div {position: absolute; top: 0; left: 0; width: 100%;}
+.stage div:nth-child(1) {transform: rotateX(0deg) translateZ(50vh);}
+.stage div:nth-child(2) {transform: rotateX(-90deg) translateZ(50vh);}
+.stage div:nth-child(3) {transform: rotateX(-180deg) translateZ(50vh);}
+.stage div:nth-child(4) {transform: rotateX(-270deg) translateZ(50vh);}
+

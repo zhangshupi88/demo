@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  &:focus,
+  &:active,
+  &:focus:active {
+    outline: none;
+  }
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+}

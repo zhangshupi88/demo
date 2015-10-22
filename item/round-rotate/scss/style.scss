@@ -1,0 +1,14 @@
+html, body { height: 100%; }
+body {
+     background: radial-gradient(#80a1cc,#171d25);
+     margin: 0;
+}
+
+#canvas {
+     position: absolute;
+     margin: auto;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+}

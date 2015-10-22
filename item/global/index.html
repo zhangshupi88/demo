@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>磁贴球</title>
+<style type="text/css">
+body{background:#007aff;}
+.loader{width:200px;height:200px;margin:200px auto;}
+.loader .point{position:relative;background:#fff;border-radius:50%;width:20px;height:20px;display:inline-block;-webkit-transform-origin: 50% -50px;float:left;}
+.one{-webkit-animation:move 0.5s 0s linear infinite alternate;}
+.five{-webkit-animation:movefive 0.5s 1s linear infinite alternate;}
+.loader .point:after{content:"";position:absolute;top:-49px;left:9px;width:2px;height:50px;background:#fff}
+@keyframes move{
+	 0%{
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 50% -50px;
+  }
+  50%{
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 50% -50px;
+  }
+  100%{
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 50% -50px;
+  }
+	}
+	@keyframes movefive{
+	 0%{
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 50% -50px;
+  }
+  50%{
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 50% -50px;
+  }
+  100%{
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 50% -50px;
+  }
+	}
+</style>
+</head>
+
+<body>
+ <div class="loader">
+    <div class='point one'></div>
+    <div class='point two'></div>
+    <div class='point three'></div>
+    <div class='point four'></div>
+    <div class='point five'></div>
+  </div>
+</body>
+</html>

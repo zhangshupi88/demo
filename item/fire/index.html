@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Witch's Brew</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="gooeys center">
+  <canvas style="position:absolute;" id="canvas"</canvas>
+</div>
+
+<div class="glow center"></div>
+<div class="shadow center"></div>
+<div class="pot-top center"></div>
+<div class="pot center"></div>
+
+
+
+<svg>
+  <defs>
+    <filter id="filter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 17 -10" result="filter" />
+      <!-- <feComposite in="SourceGraphic" in2="filter" operator="atop" /> -->
+    </filter>
+  </defs>
+</svg>
+    
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>

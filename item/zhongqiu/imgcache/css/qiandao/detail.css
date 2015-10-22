@@ -1,0 +1,12 @@
+@charset "utf-8";
+@import url(reset.css);
+/*活动说明*/
+.detail-wrap{font-size:1.6rem;}
+.detail-wrap dl{padding:15px 8px;}
+.detail-wrap dl dt{margin-bottom:10px;width:28%}
+.detail-wrap dl dt img{width:100%}
+.detail-wrap dl dd{color:rgba(0,0,0,0.85);margin-bottom:45px;line-height:24px;}
+.detail-wrap .title{ position:relative;font-size:16px;color:#fff; background: #d91e2f url(../../images/qiandao/bg-dot.png) repeat 0 0;
+  padding: 15px 8px 25px;line-height:24px;
+}
+.detail-wrap .title:after{content:"";background:url(../../images/qiandao/wavebg.png) repeat-x 0 0;width:100%;height:10px;background-size:contain;position:absolute;bottom:0;left:0;}

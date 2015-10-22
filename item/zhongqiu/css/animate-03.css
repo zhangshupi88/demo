@@ -1,0 +1,116 @@
+.pg03 {
+    background-image: url(../images/pg03@2x.png);
+    background-repeat: no-repeat;
+    display: block;
+    background-size: 18.8125rem 71.625rem;
+}
+
+.pg03-girl {
+    position: absolute;
+    right: 4.0625rem;
+    bottom: -6.375rem;
+    z-index: 30;
+    width: 8.375rem;
+    height: 13.0625rem;
+    background-position: -0.125rem -0.125rem;
+}
+
+.pg03-money2 {
+    position: absolute;
+    top:7rem;
+    left: 3.75rem;
+    width: 2.8125rem;
+    height: 2.125rem;
+    background-position: -0.125rem -13.4375rem;
+}
+
+.pg03-money1 {
+    position: absolute;
+    top:7rem;
+    left: 11.25rem;
+    width: 4.8125rem;
+    height: 3rem;
+    background-position: -0.125rem -15.8125rem;
+}
+
+.pg03-money3 {
+    position: absolute;
+    right: 1.875rem;
+    top:15rem;
+    z-index: 40;
+    width: 4.5625rem;
+    height: 1.9375rem;
+    background-position: -0.125rem -19.0625rem;
+}
+
+.pg03-phone {
+    position: absolute;
+    bottom: -5.125rem;
+    left: 0px;
+    z-index: 10;
+    width: 14.1875rem;
+    height: 20.5rem;
+    background-position: -0.125rem -21.25rem;
+}
+
+.pg03-lightning {
+    position: absolute;
+    bottom: -3.125rem;
+    left: 3.75rem;
+    width: 17.8125rem;
+    height: 22.25rem;
+    background-position: -0.125rem -42rem;
+}
+
+.pg03-text2 {
+    position: absolute;
+    top:-0.3125rem;
+    left:1.3125rem;
+    width: 18.5625rem;
+    height: 1.25rem;
+    background-position: -0.125rem -64.6rem;
+}
+
+.pg03-text1 {
+    position: absolute;
+    left:1.25rem;
+    top:-6.875rem;
+    width: 17.3125rem;
+    height: 5.5rem;
+    background-position: -0.125rem -66rem;
+}
+.pg03-text3 {
+    position: absolute;
+    top: 1.8rem;
+    left: 1.1rem;
+    width: 20.625rem;
+    height: 2.5rem;  
+    background-image: url(../images/pg03-text@2x.png);
+    background-size: 20.625rem 2.5rem;
+     
+}
+
+
+.pg03-round {
+    position: absolute;
+    bottom: -5.125rem;
+    left: 50%;
+    margin-left: -10rem;
+    width: 19.6875rem;
+    height: 19.6875rem;
+    border-radius: 19.6875rem;
+    background: #4fa0e6;
+}
+
+
+.pg03-zhezhao { 
+    position: absolute;
+    left: 50%;
+    z-index: 40;
+    margin-left: -11.625rem;
+    bottom: -8.25rem;
+    width: 23.4375rem;
+    height: 8.6875rem;
+    background:url(../images/pg03_zhezhao.png);
+    background-size: 23.4375rem 8.6875rem;
+}

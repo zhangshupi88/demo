@@ -1,0 +1,58 @@
+$bg: #013B3B;
+$canvas: #F4C552;
+$numbers: #FF4D5B;
+$activeNumber: #000;
+
+body {
+  margin: 0;
+  font-family: 'ChunkFive';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $bg;
+}
+
+.container {
+  width: 30em;
+  align-items: center;
+}
+
+.controls {
+  font-size: 2em;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  li {
+    flex: 1;
+  }
+  
+  a {
+    color: $numbers;
+    text-decoration: none;
+    display: block;
+    padding: .2em 0;
+    cursor: pointer;
+    
+    &.active {
+      color: $activeNumber;
+      background-color: $canvas;
+    }
+  }
+}
+
+.effects {
+  background-color: $canvas;
+  padding: 1em;
+}
+
+.effect {
+  height: 2.5em;
+  background-color: #FFF;
+  font-size: 6em;
+  text-align: center;
+  line-height: 2.5em;
+}
