@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3动画页面汇总</title>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0; padding:0;}
+body{background-color:#FFFFFF; font:12px/20px Verdana,Arial; color:##333; line-height:20px;}
+fieldset,img,button,input{border:0 none;}
+input,select,button{font:12px/20px Verdana,Arial;}
+table{border-collapse:collapse; border-spacing:0; font:12px/20px Verdana,Arial;}
+ul,ol{list-style:none;}
+a:link,a:visited {color:#0b5ba5;text-decoration:none;}
+a:hover,a:active {color:#FF6600 ;text-decoration:none;}
+h3{ font-size:24px; line-height:50px; color:#fff; background:#125A9C; padding-left:20px; font-family:"微软雅黑" ; }
+body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #777777;
+    margin: 0 auto 200px;
+    position: relative;
+}
+.author{ color:#CCCCCC; font-size:12px; text-align:right; position:absolute;right:20px; top:5px;}
+.wrap {margin:30px;clear:both;}
+h2{margin: 0 0 5px 10px;; padding: 0 0 10px;border-bottom: 1px dashed #CCCCCC;color: #993333;font-weight:400;font-size:16px;}
+/*图片放大*/
+ul#gallery {margin:0 auto 10px; padding-left:0;background:#fff; overflow:hidden; }
+ul#gallery li { width:170px; float:left; margin:10px 10px 10px 0; display:inline;text-align:center; }
+ul#gallery li a.smallimage { margin:5px;padding:5px; display:block; width:150px; height:150px;border:1px solid #D3D3D3; -moz-border-radius:10px;-moz-box-shadow:10px 10px 10px #ccc;border-radius:10px;box-shadow:10px 10px 10px #ccc; }
+ul#gallery li a.smallimage img{width:150px;height:150px;}
+#bigimage { position:absolute; display:none; }
+#bigimage img {max-width:500px; padding:5px; background:#fff; border:1px solid #e3e3e3; }
+</style>
+<script type="text/javascript" src="imgcache/js/jquery.js"></script>
+<script>
+$(function(){	 
+	
+    var x = 22;
+	var y = 20;
+	$("a.smallimage").hover(function(e){
+		$("body").append('<p id="bigimage"><img src="'+ this.rel + '" alt="" /></p>');
+        $(this).find('img').stop().fadeTo('slow',0.5);		
+		widthJudge(e);
+	    $("#bigimage").fadeIn('fast');
+	},function(){
+	    $(this).find('img').stop().fadeTo('slow',1);
+		$("#bigimage").remove();
+    });	
+	
+	$("a.smallimage").mousemove(function(e){
+		widthJudge(e);
+	});	
+	
+    function widthJudge(e){
+		var marginRight = document.documentElement.clientWidth - e.pageX; 
+		var imageWidth = $("#bigimage").width();
+		if(marginRight < imageWidth)
+		{
+		    x = imageWidth + 22;
+			$("#bigimage").css({top:(e.pageY - y ) + 'px',left:(e.pageX - x ) + 'px'});	
+		}else{
+		    x = 22;
+		    $("#bigimage").css({top:(e.pageY - y ) + 'px',left:(e.pageX + x ) + 'px'});
+        };	
+	}
+});
+//]]>
+</script>
+</head>
+
+<body>
+<h3>CSS3动画页面汇总</h3>
+<div class="author">author:barkzhang<br />date:20110825</div>
+<div class="wrap">
+    <h2>图形：</h2>
+    <ul id="gallery">
+      <li><a href="item/dafengche/index.html" class="smallimage" rel="imgcache/pic/dafengche.png"><img src="imgcache/pic/dafengche.png"/></a><br/>大风车</li>
+       <li><a href="item/rotate-zuan/index.html" class="smallimage" rel="imgcache/pic/rotate-zuan.png"><img src="imgcache/pic/rotate-zuan.png"/></a><br/>钻石旋转</li>
+        <li><a href="item/yao/lottery.html" class="smallimage" rel="imgcache/pic/yao.png"><img src="imgcache/pic/yao.png"/></a><br/>摇一摇抽奖</li>
+         <li><a href="item/lazhu/index.html" class="smallimage" rel="imgcache/pic/lazhu.png"><img src="imgcache/pic/lazhu.png"/></a><br/>蛋糕蜡烛</li>
+           <li><a href="item/round/index.html" class="smallimage" rel="imgcache/pic/round.png"><img src="imgcache/pic/round.png"/></a><br/>星球绕行</li>
+           <li><a href="item/round-star/index.html" class="smallimage" rel="imgcache/pic/round-star.png"><img src="imgcache/pic/round-star.png"/></a><br/>星球星空</li>
+             <li><a href="item/round-rotate/index.html" class="smallimage" rel="imgcache/pic/round-rotate.png"><img src="imgcache/pic/round-rotate.png"/></a><br/>圆形旋转</li>
+               <li><a href="item/global/index.html" class="smallimage" rel="imgcache/pic/global-citie.png"><img src="imgcache/pic/global-citie.png"/></a><br/>磁贴小球</li>
+                 <li><a href="item/box-shadow/index.html" class="smallimage" rel="imgcache/pic/box-shadow.png"><img src="imgcache/pic/box-shadow.png"/></a><br/>box-shadow</li>
+                  <li><a href="item/3d-box/index.html" class="smallimage" rel="imgcache/pic/3d-box.png"><img src="imgcache/pic/3d-box.png"/></a><br/>3d-box</li>
+           
+          
+      
+    </ul>
+</div>
+<div class="wrap">
+    <h2>CANVAS：</h2>
+    <ul id="gallery">
+      <li><a href="item/biaobai/index.html" class="smallimage" rel="imgcache/pic/biaobai.png"><img src="imgcache/pic/biaobai.png"/></a><br/>
+      打字机-心形</li>
+         <li><a href="item/qipao/index.html" class="smallimage" rel="imgcache/pic/qipao.png"><img src="imgcache/pic/qipao.png"/></a><br/>气泡</li>
+          <li><a href="item/fire/index.html" class="smallimage" rel="imgcache/pic/fire.png"><img src="imgcache/pic/fire.png"/></a><br/>鬼火</li>
+           <li><a href="item/tree/index.html" class="smallimage" rel="imgcache/pic/tree.png"><img src="imgcache/pic/tree.png"/></a><br/>飘落的树叶</li>
+            <li><a href="item/tree-circle/index.html" class="smallimage" rel="imgcache/pic/tree-circle.png"><img src="imgcache/pic/tree-circle.png"/></a><br/>飘落圆圈</li>
+             <li><a href="item/3d-bal/index.html" class="smallimage" rel="imgcache/pic/3d-bal.png"><img src="imgcache/pic/3dbal.png"/></a><br/>
+      3d球</li>
+          
+      
+    </ul>
+</div>
+<div class="wrap">
+    <h2>表单：</h2>
+    <ul id="gallery">
+      <li><a href="item/search/index.html" class="smallimage" rel="imgcache/pic/search.png"><img src="imgcache/pic/search.png"/></a><br/>
+      输入框</li>
+       <li><a href="item/loading/index.html" class="smallimage" rel="imgcache/pic/loading.png"><img src="imgcache/pic/loading.png"/></a><br/>3Dloading进度条</li>
+        <li><a href="item/rotate-3dshape/index.html" class="smallimage" rel="imgcache/pic/rotate-3dshape.png"><img src="imgcache/pic/rotate-3dshape.png"/></a><br/>3D图片旋转</li>
+       
+      
+    </ul>
+</div>
+<div class="wrap">
+    <h2>节日：</h2>
+    <ul id="gallery">
+      <li><a href="item/christmas/index.html" class="smallimage" rel="imgcache/pic/christmas.png"><img src="imgcache/pic/christmas.png"/></a><br/>
+      圣诞节</li>
+     
+       
+      
+    </ul>
+</div>
+  <div class="wrap">
+    <h2>形状：</h2>
+    <ul id="gallery">
+           <li><a href="item/react-calculator/index.html" class="smallimage" rel="imgcache/pic/calcu.png"><img src="imgcache/pic/calcu.png"/></a><br/>计算器</li>
+            <li><a href="item/svg-check/index.html" class="smallimage" rel="imgcache/pic/svg-check.png"><img src="imgcache/pic/svg-check.png"/></a><br/>成功SVG路径</li>
+            <li><a href="item/svg-red/index.html" class="smallimage" rel="imgcache/pic/svg-red.png"><img src="imgcache/pic/svg-red.png"/></a><br/>红色夕阳</li>
+            <li><a href="item/img-lost/index.html" class="smallimage" rel="imgcache/pic/img-lost.png"><img src="imgcache/pic/img-lost.png"/></a><br/>img旋转消失</li>
+             <li><a href="item/water-circle/index.html" class="smallimage" rel="imgcache/pic/water-circle.png"><img src="imgcache/pic/water-circle.png"/></a><br/>水蒸汽</li>
+     
+    </ul>
+</div>   
+<div class="wrap">
+    <h2>宣传页面展示：</h2>
+    <ul id="gallery">
+      <li><a href="item/zhongqiu/html/zhongqiu/index.html" class="smallimage" rel="imgcache/pic/zhongqiu.png"><img src="imgcache/pic/zhongqiu.png"/></a><br/>中秋节</li>
+     
+    </ul>
+</div>   
+</body>
+</html>
